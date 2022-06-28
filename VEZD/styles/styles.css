@@ -1,0 +1,239 @@
+body {
+	background-color: #423d2b;
+	background-image: url(../images/fond_vezd.png);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Tahoma, Arial, Sans-serif;
+	color: white;
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+	padding : 0px;
+}
+
+/*ATTENTION : necessite donc de laisser les "h", meme dans l'index*/
+h1, .reinit_h2{	                          /*ATTENTION : classe à placer sur la même hierarchie (scope) que h1, sinon crée juste un nouveau compteur sur la hierarchie ou il est. CF : scope variable en progra'.*/
+	counter-reset: h2counter;             /* remet le compteur de h2 à 0 au cas ou*/
+}
+
+h2.countheads:before {                              /*normalement les pseudo élément (first-line, etc), c'est :: mais certains acceptent : (pseudo class, normalement a:link, etc) comme ici*/
+	content: counter(h2counter) ".\0000a0\0000a0"; /*affiche la valeur du compteur h2 en "décimal" par défaut ("\a0" pour les espaces insécables) */
+	counter-increment: h2counter;                  /*après avoir utilisé le compteur h2 ligne au-dessus, l'augmente pour le suivant*/
+}
+
+h2 {
+	counter-reset: h3counter;                      /*réinitialise le compteur h3 puisequ'on est au h2 suivant. Ne peut être placé dans le pseudo élément ::before, car sinon, crée une variable compteur dans le pseudo element ::before et disparait avec lui et rien n'est réinitialisé.*/
+}
+
+h3.countheads:before {
+	content: /*counter(h2counter, ) "." */counter(h3counter, lower-latin) ".\0000a0\0000a0";  /*juste pour se rappeler que c'est possible*/
+	counter-increment: h3counter;
+}
+
+h5 {
+	font-size: 16px;
+	font-weight: 200;
+}
+
+h6 {
+	font-size: 13px;
+	font-weight: 200;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+	color: brown;
+}
+
+cite {
+	color: #448;
+}
+
+figure {
+	border: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+iframe {
+	border: none;
+	overflow: hidden;
+}
+
+textarea#remarques {
+	height: 208px;
+	width: 750px;
+}
+
+form {
+	margin-top: 100px;
+}
+
+label {
+	margin: 16px 16px 16px 0px;
+}
+
+footer {
+	text-shadow: 4px 4px 3px black, -4px 4px 3px black, -4px -4px 3px black, 4px -4px 3px black; 
+}
+
+ol.region h2, ol.region ol h3 {
+	display: inline-block;
+}
+
+.titre_souligne h1, .titre_souligne h2, .titre_souligne h3, .titre_souligne h4, .titre_souligne h5 , .titre_souligne h6{
+	text-decoration: underline;
+}
+
+.encadrement {
+	padding : 0px 10px 10px 10px;
+	margin-top: 30px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+}
+
+.source {
+	text-align: right;
+	font-size: 12px;
+}
+
+.note {
+	font-size: 12px;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #333;
+}
+
+.nav_semaine {
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0px 0px 50px 0px;
+}
+
+.contenu {
+	margin: 0px;
+	padding: 10px;
+	color: black;
+	background-color: #DCB;
+}
+
+.attention {
+	color: red;
+}
+
+.sans_puce ol, .sans_puce ul {
+	list-style-type: none;
+}
+
+.first_ul {
+	list-style-type: circle;
+}
+
+.region {
+	list-style-type: upper-roman;
+}
+
+#nav {
+	height: 63px;
+}
+
+#nav a {
+	display: inline-block;
+}
+
+#nav a:first-child img {
+	width: 109px;
+	height: 63px;
+}
+
+#nav_semaine li{
+	margin-top: 10px;
+}
+
+#copyright {
+	text-align: center;
+}
+
+#image_titre{
+	margin: 0px;
+}
+
+#image_titre img{
+	width: 850px;
+	position: relative;
+	top: -10px;
+	left: -10px;
+}
+
+#communaute {
+	text-align: right;
+	margin: 0px;
+}
+
+#communaute img {
+	height: 50px;
+	width: 50px;
+}
+
+#title_caption {
+	float: left;
+}
+
+#image_titre_vegan {
+	text-align: center;
+}
+
+#image_titre_vegan img {
+	height: 500px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#rasoir_defi {
+	width: 500px;
+}
+
+#rasoir_defi img {
+	width: 500px;
+	height: auto;
+}
+
+#continent_plastique {
+	width: 800px;
+}
+
+#continent_plastique img{
+	width: 800px;
+	height: auto;
+}
+
+#mail {
+	width: 250px;
+}
+
+#pseudo {
+	width: 180px;
+}
+
+#index {
+	margin: 50px 50px 50px 20px;
+	padding: 16px;
+	border: 2px dotted grey;
+}
+
+#index a {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+#index h2, #index h3, #index h4 {
+	font-size: 12px;
+	font-weight: 100;
+	line-height: 12px;
+	display: inline;
+}

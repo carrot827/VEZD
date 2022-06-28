@@ -1,0 +1,75 @@
+<!doctype html> 
+<html>
+	<meta charset="UTF-8"> 
+	<head>
+      <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+	  <link rel="shortcut icon" href="../favicon.ico">
+
+      <title>
+        VEZD - Contact
+      </title>
+      
+    </head>
+	<body>
+	
+		<header>
+			<div id="nav">
+				<a href="../index.html"><img src="../images/nav/1.png" alt="Accueil" title="Accueil"></a><!--                            supprime les espaces indésirables entre les boutons
+				--><a href="debuter.html"><img src="../images/nav/2.png" alt="Débuter" title="Débuter"></a><!--
+				--><a href="challenges.html"><img src="../images/nav/3.png" alt="Challenges" title="Challenges"></a><!--
+				--><a href="magasins-zd.html"><img src="../images/nav/4.png" alt="Magasins ZD" title="Magasins ZD"></a><!--
+				--><a href="veganisme.html"><img src="../images/nav/5.png" alt="Véganisme" title="Véganisme"></a><!--
+				--><a href="contact.html"><img src="../images/nav/6.png" alt="Contact" title="Contact"></a>
+			</div>
+		</header>
+		
+		<section class="contenu">
+				
+			<figure id="image_titre">
+				<img src="../images/Cover.png" alt="Couverture VEZD Pissanli">
+				<figcaption id="title_caption">Photography by Alexandra Casseyas</figcaption>
+			</figure>
+			
+			<figure id="communaute">
+				<a href="https://www.facebook.com/groups/708250262884369/"><img src="../images/community.PNG" alt="Communauté Facebook" title="La communauté VEZD"/></a>
+				<figcaption>La communauté VEZD</figcaption>
+			</figure>
+
+			<h1>Contact</h1>
+			
+			<p>Si vous avez des remarques quant au site (son contenu ou sa présentation), veuillez nous en faire part ci-dessous.</p>
+			
+			<form methode="post" action="../php/remarques.php">
+				<p>
+					<label for="pseudo">Pseudonyme:</label>
+					<input type="text" name="pseudo" id="pseudo" placeholder="ex: Tigrou007">
+				</p>
+				<p>
+					<label for="mail">Adresse mail (si vous souhaitez être recontacté):</label>
+					<input type="text" name="adresse" id="mail" placeholder="ex: Tigrou007@hotmail.com">
+				</p>
+				<p><label for="remarques">Vos remarques:</label></p>
+				<p><textarea name="remarques" id="remarques"></textarea></p>
+				<p>Votre appréciation du site:</p>
+				<p>Pas terrible <input type="radio" name="satisfaction" value="1" id="une_étoile"> <label for="une_étoile">1</label><input type="radio" name="satisfaction" value="2" id="deux_étoiles"> <label for="deux_étoiles">2</label><input type="radio" name="satisfaction" value="3" id="trois_étoiles"> <label for="trois_étoiles">3</label><input type="radio" name="satisfaction" value="4" id="quatre_étoiles"> <label for="quatre_étoiles">4</label><input type="radio" name="satisfaction" value="5" id="cinq_étoiles"> <label for="cinq_étoiles">5</label>Super site!</p>
+				<p> &#x26A0 <input type="submit" value="Envoyer"> &#x26A0 Work In Progress</p>
+			</form>
+
+		</section>
+		
+		<footer>
+			<p>VEZD est un projet réalisé par des étudiants de l'IESN de Namur, section informatique.</p>
+			<p>Rédaction  et design: Frédéric Grandgagnage – Maxime De Hepcée</p>
+			<p>Code web: Robert Decrolier</p>
+
+			<hr>
+			<nav>
+				<p>En quelle langue voulez-vous afficher le site?</p>
+				<a href="../nl/index-nl.html"><img src="../images/Flags/nl.png" alt="Dutch" title="Dutch"/></a>
+				<a href="../index.html"><img src="../images/Flags/fr.png" alt="Français" title="Fraiçais"/></a>
+				<a href="../en/index-en.html"><img src="../images/Flags/en.png" alt="English" title="English"/></a>
+			</nav>
+			<p id="copyright">©2019 LES VEGANES ECOLOS ZERO DECHET ALL RIGHTS RESERVED.</p>
+		</footer>
+	</body>
+</html>
